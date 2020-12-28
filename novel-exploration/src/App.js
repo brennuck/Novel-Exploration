@@ -57,19 +57,32 @@ class App extends React.Component {
                 </div>
                 <div>
                     {this.state.newBook.map((book) => {
-                        console.log("BOOK", book.volumeInfo)
-                        return (
-                            <div>
-                                <span> {book.volumeInfo?.title} </span>
-                                <span> {book.volumeInfo?.authors[0]} </span>
-                                <span> {book.volumeInfo?.publisher} </span>
-                                <span> {book.volumeInfo?.publishedDate} </span>
-                                <span> {book.volumeInfo?.description} </span>
-                                <span> {book.volumeInfo?.categories[0]} </span>
-                                <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
-                                {/* <span> {book.volumeInfo?.infoLink} </span> */}
-                            </div>
-                        )
+                        if (book.volumeInfo?.authors !== undefined) {
+                            return (
+                                <div>
+                                    <span> {book.volumeInfo?.title} </span>
+                                    <span> {book.volumeInfo?.authors[0]} </span>
+                                    <span> {book.volumeInfo?.publisher} </span>
+                                    <span> {book.volumeInfo?.publishedDate} </span>
+                                    <span> {book.volumeInfo?.description} </span>
+                                    <span> {book.volumeInfo?.categories[0]} </span>
+                                    <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
+                                    {/* <span> {book.volumeInfo?.infoLink} </span> */}
+                                </div>
+                            )
+                        } else {
+                            return (
+                                <div>
+                                    <span> {book.volumeInfo?.title} </span>
+                                    <span> {book.volumeInfo?.publisher} </span>
+                                    <span> {book.volumeInfo?.publishedDate} </span>
+                                    <span> {book.volumeInfo?.description} </span>
+                                    <span> {book.volumeInfo?.categories[0]} </span>
+                                    <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
+                                    {/* <span> {book.volumeInfo?.infoLink} </span> */}
+                                </div>
+                            )
+                        }
                     })}
                 </div>
             </div>
