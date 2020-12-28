@@ -7,32 +7,28 @@ class App extends React.Component {
         super();
         this.state = {
             input: "",
-            newBook: {
-                title: "",
-                author: "",
-                publisher: "",
-                published: "",
-                description: "",
-                category: "",
-                image: "",
-                infoLink: ""
-            }
+            newBook: [
+                {
+                    title: "Cars",
+                    author: [],
+                    publisher: "",
+                    published: "",
+                    description: "",
+                    category: "",
+                    image: "",
+                    infoLink: ""
+                }
+            ]
         }
+        this.handleConvert = this.handleConvert.bind(this)
     }
 
     handleConvert() {
-        axios({
-            "method": "GET",
-            "url": `https://www.googleapis.com/books/v1/volumes?q=${this.state.input}`,
-            "headers": {
-                "content-type":"application/json",
-                "key": "AIzaSyDlS-3kf8VMTRNlCfEPTGTD12b71ERxPgI",
-                "accept":"application/json",
-                "useQueryString":true
-            }
-        })
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.input}`)
         .then(res => {
-            console.log("res", res);
+            this.setState({
+                newBook: res.data.items
+            })
         })
         .catch(err => {
             console.log("Handle Convert Error", err);
@@ -47,9 +43,35 @@ class App extends React.Component {
     }
 
     render() {
+        console.log("UPDATED STATE", this.state.newBook)
         return (
             <div className="appContainer">
-                
+                <div>
+                    <input
+                        type="string"
+                        name="input"
+                        value={this.state.input}
+                        onChange={this.handleChanges}
+                    />
+                    <button onClick={this.handleConvert}>click</button>
+                </div>
+                <div>
+                    {this.state.newBook.map((book) => {
+                        console.log("BOOK", book.volumeInfo)
+                        return (
+                            <div>
+                                <span> {book.volumeInfo?.title} </span>
+                                <span> {book.volumeInfo?.authors[0]} </span>
+                                <span> {book.volumeInfo?.publisher} </span>
+                                <span> {book.volumeInfo?.publishedDate} </span>
+                                <span> {book.volumeInfo?.description} </span>
+                                <span> {book.volumeInfo?.categories[0]} </span>
+                                <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
+                                {/* <span> {book.volumeInfo?.infoLink} </span> */}
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         )
     }
