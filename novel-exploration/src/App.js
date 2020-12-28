@@ -9,7 +9,7 @@ class App extends React.Component {
             input: "",
             newBook: [
                 {
-                    title: "Cars",
+                    title: "",
                     author: [],
                     publisher: "",
                     published: "",
