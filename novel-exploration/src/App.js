@@ -43,7 +43,6 @@ class App extends React.Component {
     }
 
     render() {
-        console.log("UPDATED STATE", this.state.newBook)
         return (
             <div className="appContainer">
                 <div>
