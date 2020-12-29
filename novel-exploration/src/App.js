@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 import axios from 'axios';
 
@@ -46,7 +47,7 @@ class App extends React.Component {
         return (
             <div className="appContainer">
                 <h1>Novel Exploration</h1>
-                <div>
+                <div className="inputBox">
                     <input
                         type="string"
                         name="input"
