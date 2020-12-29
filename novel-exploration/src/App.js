@@ -54,7 +54,7 @@ class App extends React.Component {
                         value={this.state.input}
                         onChange={this.handleChanges}
                     />
-                    <button onClick={this.handleConvert}>click</button>
+                    <button onClick={this.handleConvert}>Explore</button>
                 </div>
                 <div>
                     {this.state.newBook.map((book) => {
