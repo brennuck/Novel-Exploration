@@ -45,6 +45,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="appContainer">
+                <h1>Novel Exploration</h1>
                 <div>
                     <input
                         type="string"
@@ -58,7 +59,7 @@ class App extends React.Component {
                     {this.state.newBook.map((book) => {
                         if (book.volumeInfo?.authors !== undefined) {
                             return (
-                                <div>
+                                <div className="bookGrid">
                                     <span> {book.volumeInfo?.title} </span>
                                     <span> {book.volumeInfo?.authors[0]} </span>
                                     <span> {book.volumeInfo?.publisher} </span>
@@ -71,7 +72,7 @@ class App extends React.Component {
                             )
                         } else {
                             return (
-                                <div>
+                                <div className="bookGrid">
                                     <span> {book.volumeInfo?.title} </span>
                                     <span> {book.volumeInfo?.publisher} </span>
                                     <span> {book.volumeInfo?.publishedDate} </span>
