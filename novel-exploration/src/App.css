@@ -28,11 +28,14 @@ input {
     border-width: 1px;
     width: 250px;
     height: 35px;
+    padding-left: 15px;
 }
 
 button {
     width: 100px;
+    height: 30px;
     margin-top: 25px;
-    border-width: 1px;
+    border-width: 0px;
     border-radius: 3px;
+    background-color: #ed7158;
 }

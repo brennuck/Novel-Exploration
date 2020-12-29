@@ -53,6 +53,7 @@ class App extends React.Component {
                         name="input"
                         value={this.state.input}
                         onChange={this.handleChanges}
+                        placeholder="Enter book here"
                     />
                     <button onClick={this.handleConvert}>Explore</button>
                 </div>
