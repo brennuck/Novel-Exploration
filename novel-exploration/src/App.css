@@ -102,6 +102,8 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     background-color: #fffaf2;
+    text-decoration: none;
+    color: black;
 }
 
 .sectional2 {

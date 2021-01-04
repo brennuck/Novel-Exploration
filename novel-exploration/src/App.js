@@ -64,7 +64,7 @@ class App extends React.Component {
                         if (book.volumeInfo?.authors !== undefined) {
                             return (
                                 <div className="bookGrid">
-                                    <div className="row">
+                                    <a className="row" href={book.volumeInfo?.infoLink} target="_blank" rel="noreferrer">
                                         <div className="bookTitle"> <strong>{book.volumeInfo?.title}</strong> </div>
                                         <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
                                         <div className="sectional2">
@@ -73,14 +73,13 @@ class App extends React.Component {
                                             <div className="bookPublished"> <strong>Published:</strong> {book.volumeInfo?.publishedDate} </div>
                                             <div className="bookCat"> <strong>Category:</strong> {book.volumeInfo?.categories[0]} </div>
                                         </div>
-                                    </div>
-                                    {/* <span> {book.volumeInfo?.infoLink} </span> */}
+                                    </a>
                                 </div>
                             )
                         } else {
                             return (
                                 <div className="bookGrid">
-                                    <div className="row">
+                                    <a className="row" href={book.volumeInfo?.infoLink} target="_blank" rel="noreferrer">
                                         <div className="bookTitle"> <strong>{book.volumeInfo?.title}</strong> </div>
                                         <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
                                         <div className="sectional2">
@@ -88,8 +87,7 @@ class App extends React.Component {
                                             <div className="bookPublished"> <strong>Published:</strong> {book.volumeInfo?.publishedDate} </div>
                                             <div className="bookCat"> <strong>Category:</strong> {book.volumeInfo?.categories[0]} </div>
                                         </div>
-                                        {/* <span> {book.volumeInfo?.infoLink} </span> */}
-                                    </div>
+                                    </a>
                                 </div>
                             )
                         }
