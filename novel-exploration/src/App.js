@@ -68,7 +68,6 @@ class App extends React.Component {
                                     <div className="bookPublisher"> Publisher: {book.volumeInfo?.publisher} </div>
                                     <div className="bookPublished"> Published: {book.volumeInfo?.publishedDate} </div>
                                     <div className="bookCat"> Category: {book.volumeInfo?.categories[0]} </div>
-                                    <div className="bookDesc"> {book.volumeInfo?.description} </div>
                                     {/* <span> {book.volumeInfo?.infoLink} </span> */}
                                 </div>
                             )
@@ -80,7 +79,6 @@ class App extends React.Component {
                                     <div className="bookPublisher"> Publisher: {book.volumeInfo?.publisher} </div>
                                     <div className="bookPublished"> Published: {book.volumeInfo?.publishedDate} </div>
                                     <div className="bookCat"> Category: {book.volumeInfo?.categories[0]} </div>
-                                    <div className="bookDesc"> {book.volumeInfo?.description} </div>
                                     {/* <span> {book.volumeInfo?.infoLink} </span> */}
                                 </div>
                             )
