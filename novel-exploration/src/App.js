@@ -29,7 +29,8 @@ class App extends React.Component {
         axios.get(`https://www.googleapis.com/books/v1/volumes?q=${this.state.input}`)
         .then(res => {
             this.setState({
-                newBook: res.data.items
+                newBook: res.data.items,
+                showing: true
             })
         })
         .catch(err => {
@@ -58,7 +59,7 @@ class App extends React.Component {
                     />
                     <button onClick={this.handleConvert}>Explore</button>
                 </div>
-                <div className="bookGridContainer">
+                {this.state.showing ? <div className="bookGridContainer">
                     {this.state.newBook.map((book) => {
                         if (book.volumeInfo?.authors !== undefined) {
                             return (
@@ -93,7 +94,7 @@ class App extends React.Component {
                             )
                         }
                     })}
-                </div>
+                </div> : <div></div> }
             </div>
         )
     }
