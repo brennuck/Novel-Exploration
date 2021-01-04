@@ -62,24 +62,32 @@ class App extends React.Component {
                         if (book.volumeInfo?.authors !== undefined) {
                             return (
                                 <div className="bookGrid">
-                                    <div className="bookTitle"> {book.volumeInfo?.title} </div>
-                                    <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
-                                    <div className="bookAuthor"> Author: {book.volumeInfo?.authors[0]} </div>
-                                    <div className="bookPublisher"> Publisher: {book.volumeInfo?.publisher} </div>
-                                    <div className="bookPublished"> Published: {book.volumeInfo?.publishedDate} </div>
-                                    <div className="bookCat"> Category: {book.volumeInfo?.categories[0]} </div>
+                                    <div className="row">
+                                        <div className="bookTitle"> <strong>{book.volumeInfo?.title}</strong> </div>
+                                        <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
+                                        <div className="sectional2">
+                                            <div className="bookAuthor"> <strong>Author:</strong> {book.volumeInfo?.authors[0]} </div>
+                                            <div className="bookPublisher"> <strong>Publisher:</strong> {book.volumeInfo?.publisher} </div>
+                                            <div className="bookPublished"> <strong>Published:</strong> {book.volumeInfo?.publishedDate} </div>
+                                            <div className="bookCat"> <strong>Category:</strong> {book.volumeInfo?.categories[0]} </div>
+                                        </div>
+                                    </div>
                                     {/* <span> {book.volumeInfo?.infoLink} </span> */}
                                 </div>
                             )
                         } else {
                             return (
                                 <div className="bookGrid">
-                                    <div className="bookTitle"> {book.volumeInfo?.title} </div>
-                                    <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
-                                    <div className="bookPublisher"> Publisher: {book.volumeInfo?.publisher} </div>
-                                    <div className="bookPublished"> Published: {book.volumeInfo?.publishedDate} </div>
-                                    <div className="bookCat"> Category: {book.volumeInfo?.categories[0]} </div>
-                                    {/* <span> {book.volumeInfo?.infoLink} </span> */}
+                                    <div className="row">
+                                        <div className="bookTitle"> {book.volumeInfo?.title} </div>
+                                        <img src={book.volumeInfo?.imageLinks?.thumbnail} alt="bookcover" />
+                                        <div className="sectional2">
+                                            <div className="bookPublisher"> Publisher: {book.volumeInfo?.publisher} </div>
+                                            <div className="bookPublished"> Published: {book.volumeInfo?.publishedDate} </div>
+                                            <div className="bookCat"> Category: {book.volumeInfo?.categories[0]} </div>
+                                        </div>
+                                        {/* <span> {book.volumeInfo?.infoLink} </span> */}
+                                    </div>
                                 </div>
                             )
                         }
