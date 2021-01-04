@@ -38,7 +38,7 @@ button {
     margin-bottom: 30px;
     border-width: 0px;
     border-radius: 3px;
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
 
 .bookGridContainer {
@@ -57,39 +57,40 @@ button {
     flex: 1 0 35%;
     margin: 5px 19px 36px 5px;
     width: 600px;
-    background-color: #ed7158;
+    background-color: #fffaf2;
     flex-direction: row;
+    border: 2px solid #fff0d9;
 }
 
 .bookTitle {
-    background-color: #ed7158;
+    background-color: #fffaf2;
     font-size: 18px;
     width: 95%;
     margin-bottom: 10px;
 }
 
 .bookAuthor {
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
 
 .bookPublisher {
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
 
 .bookPublished {
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
 
 .bookCat {
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
 
 .bookDesc {
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
 
 img {
-    background-color: #ed7158;
+    background-color: #fffaf2;
     width: 128px;
     height: auto;
     display: block;
@@ -100,13 +101,13 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
 
 .sectional2 {
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
 
 strong {
-    background-color: #ed7158;
+    background-color: #fffaf2;
 }
