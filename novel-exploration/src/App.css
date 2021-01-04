@@ -39,3 +39,35 @@ button {
     border-radius: 3px;
     background-color: #ed7158;
 }
+
+/* .bookGridContainer {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+
+.bookGrid {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 500px;
+} */
+
+.bookGridContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.bookGrid {
+    display: inline-block;
+    padding: 20px;
+    flex-grow: 1;
+    border-radius: 15px;
+    /* color: black; */
+    flex: 1 0 21%;
+    margin: 5px 5px 50px 5px;
+    width: 600px;
+    background-color: #ed7158;
+}
+
